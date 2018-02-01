@@ -1,0 +1,25 @@
+﻿<h1>Getting Api Data.</h1>
+
+<div>
+
+    <p>
+        <button class="btn btn-primary" (click)="closable = true">Show modal</button>
+    </p>
+
+    <clr-modal [(clrModalOpen)]="closable" [clrModalClosable]="false"
+               [clrModalSize]="'sm'">
+        <div class="modal-body">
+            <div style="height: 50px;">
+                <span class="spinner spinner-md" 
+                      style="display: block;margin: 0 auto;">
+                    Loading...
+                </span>    
+            </div>
+            
+
+        </div>
+    </clr-modal>
+
+</div>
+
+

@@ -24,7 +24,7 @@ const treeShakableModules = [
 const nonTreeShakableModules = [
     'tether',
     'bootstrap',
-    'bootstrap/dist/css/bootstrap.css',
+    //'bootstrap/dist/css/bootstrap.css',
     'es6-promise',
     'es6-shim',
     'event-source-polyfill',
