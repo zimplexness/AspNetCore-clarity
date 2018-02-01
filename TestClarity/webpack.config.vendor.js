@@ -13,6 +13,13 @@ const treeShakableModules = [
     '@angular/platform-browser-dynamic',
     '@angular/router',
     'zone.js',
+
+    '@webcomponents/custom-elements',
+
+    '@clr/ui/clr-ui.min.css',
+    '@clr/icons/clr-icons.min.css',
+    '@clr/icons',
+    '@clr/angular'
 ];
 const nonTreeShakableModules = [
     'bootstrap',
