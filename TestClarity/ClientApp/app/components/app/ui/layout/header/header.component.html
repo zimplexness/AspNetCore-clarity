@@ -1,24 +1,24 @@
-<header class="header header-1">
-      <div class="branding">
+<clr-header>
+    <div class="branding">
         <a [routerLink]="['/']" style="color:white" class="nav-link">
             <clr-icon shape="bug"></clr-icon>
-          <span class="title">Clarity Demo</span>
+            <span class="title">Clarity Demo</span>
         </a>
-      </div>
-      <div class="header-nav">
-          <a *ngFor="let headerLink of headerLinks" 
-             [routerLink]="headerLink.link" routerLinkActive="active" 
-             class="nav-link nav-icon" (click)="headerLink.onClick">
-              <clr-icon [attr.shape]="headerLink.icon"></clr-icon>
-          </a>
-      </div>
+    </div>
+    <div class="header-nav" [clr-nav-level]="1">
+        <a *ngFor="let headerLink of headerLinks"
+           [routerLink]="headerLink.link" routerLinkActive="active"
+           class="nav-link nav-icon" (click)="headerLink.onClick">
+            <clr-icon [attr.shape]="headerLink.icon"></clr-icon>
+        </a>
+    </div>
 
-    </header>
-    <nav class="subnav">
-      <ul class="nav">
+</clr-header>
+<nav class="subnav">
+    <ul class="nav">
         <li *ngFor="let subLink of subLinks" class="nav-item">
-          <a class="nav-link" routerLinkActive="active" [routerLink]="subLink.link">{{subLink.label}}</a>
+            <a class="nav-link" routerLinkActive="active" [routerLink]="subLink.link">{{subLink.label}}</a>
         </li>
-      </ul>
-    </nav>
+    </ul>
+</nav>
 

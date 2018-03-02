@@ -1,5 +1,5 @@
 ﻿import { Component, OnInit } from '@angular/core';
-import {WeatherForecast, WeatherService} from '../models/index';
+import { WeatherForecast, WeatherService } from '../models/index';
 
 @Component({
     selector: 'home',
@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
     public closable: boolean = false;
 
 
-    constructor(private weatherService : WeatherService) { }
+    constructor(private weatherService: WeatherService) { }
 
     ngOnInit(): void {
         this.forecast = [];
@@ -24,5 +24,12 @@ export class HomeComponent implements OnInit {
                 console.log(this.forecast);
             });
     }
-    
+
+    showModal () : void {
+        this.closable = true;
+        setTimeout(() => {
+            console.log('Closing popup...');
+            this.closable = false;
+        }, 5000);
+    }
 }
