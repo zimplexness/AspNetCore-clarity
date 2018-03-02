@@ -10,8 +10,8 @@ export class HeaderComponent {
     constructor(private router : Router) {  }
 
     headerLinks = [
-        { link: ['/', 'home'], icon: 'home' },
-        { link: ['/', 'settings'], icon: 'cog' }
+        { link: ['/', 'home'], icon: 'home', label : 'Home' },
+        { link: ['/', 'settings'], icon: 'cog' , label : 'Settings'}
     ];
 
     subLinks = [

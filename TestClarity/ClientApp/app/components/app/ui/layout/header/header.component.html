@@ -6,15 +6,21 @@
         </a>
     </div>
     <div class="header-nav" [clr-nav-level]="1">
-        <a *ngFor="let headerLink of headerLinks"
+        <!--<a *ngFor="let headerLink of headerLinks"
            [routerLink]="headerLink.link" routerLinkActive="active"
            class="nav-link nav-icon" (click)="headerLink.onClick">
             <clr-icon [attr.shape]="headerLink.icon"></clr-icon>
+
+        </a>-->
+        <a *ngFor="let headerLink of headerLinks"
+           [routerLink]="headerLink.link" routerLinkActive="active"
+           class="nav-link nav-text" (click)="headerLink.onClick">
+            <span class="nav-text">{{headerLink.label}}</span>
         </a>
     </div>
 
 </clr-header>
-<nav class="subnav">
+<nav class="subnav" [clr-nav-level]="2">
     <ul class="nav">
         <li *ngFor="let subLink of subLinks" class="nav-item">
             <a class="nav-link" routerLinkActive="active" [routerLink]="subLink.link">{{subLink.label}}</a>
